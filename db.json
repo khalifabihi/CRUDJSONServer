@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstName": "Astra",
+      "lastName": "Marsh",
+      "email": "suro@mailinator.com",
+      "mobile": "Holmes",
+      "salary": "10000"
+    },
+    {
+      "id": 3,
+      "firstName": "Elliott",
+      "lastName": "Clemons",
+      "email": "wydyqo@mailinator.com",
+      "mobile": "Bentley",
+      "salary": "6000"
+    },
+    {
+      "id": 4,
+      "firstName": "Shelby",
+      "lastName": "Vincent",
+      "email": "suce@mailinator.com",
+      "mobile": "Hayden",
+      "salary": "12000"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
