@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from '../shared/api.service';
 import { EmployeeModel } from './employee-dashboard.model';
@@ -11,13 +11,13 @@ import { EmployeeModel } from './employee-dashboard.model';
 })
 export class EmployeeDashboardComponent implements OnInit {
 
-  formValue !: FormGroup;
+  formValue !: UntypedFormGroup;
   employeeModelObj: EmployeeModel = new EmployeeModel();
   employeeData !: any;
   showAdd !: boolean;
   showUpdate !: boolean;
 
-  constructor(private formBuilder: FormBuilder, private api: ApiService, private router: Router) { }
+  constructor(private formBuilder: UntypedFormBuilder, private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({

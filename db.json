@@ -38,7 +38,15 @@
       "lastName": "Parrish",
       "email": "dahozujaju@mailinator.com",
       "mobile": "Henderson",
-      "salary": "4000"
+      "salary": "1600"
+    },
+    {
+      "id": 8,
+      "firstName": "Philip",
+      "lastName": "Dillon",
+      "email": "qomafef@mailinator.com",
+      "mobile": "2000",
+      "salary": "2000"
     }
   ],
   "signupUsers": [
@@ -76,6 +84,13 @@
       "email": "tagoh@mailinator.com",
       "password": "12345",
       "id": 5
+    },
+    {
+      "fullname": "test user",
+      "mobile": 123,
+      "email": "test@test.test",
+      "password": "123",
+      "id": 6
     }
   ],
   "profile": {
