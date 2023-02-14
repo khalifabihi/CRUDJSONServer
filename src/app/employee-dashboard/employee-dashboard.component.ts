@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from '../shared/api.service';
 import { EmployeeModel } from './employee-dashboard.model';
 
@@ -16,7 +17,7 @@ export class EmployeeDashboardComponent implements OnInit {
   showAdd !: boolean;
   showUpdate !: boolean;
 
-  constructor(private formBuilder: FormBuilder, private api: ApiService) { }
+  constructor(private formBuilder: FormBuilder, private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({
@@ -27,6 +28,9 @@ export class EmployeeDashboardComponent implements OnInit {
       salary: ['']
     })
     this.getAllEmployee();
+    if (!localStorage.getItem('user')) {
+      this.router.navigate(['login']);
+    }
   }
 
   clickAddEmployee() {
@@ -97,6 +101,11 @@ export class EmployeeDashboardComponent implements OnInit {
       this.formValue.reset();
       this.getAllEmployee();
     })
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['login']);
   }
 
 }

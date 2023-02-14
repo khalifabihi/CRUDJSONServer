@@ -1,0 +1,66 @@
+<div class="section login-page container-fluid">
+  <div class="row aligh-item-center">
+    <div class="col-sm-3 p-0">
+      <div class="login-form">
+        <div class="logo">
+          <a class="">
+            <img src="https://svgshare.com/i/nEz.svg" alt="">
+          </a>
+        </div>
+        <div class="page-heading">
+          <h2>Sign Up</h2>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="login-form-items">
+          <div class="items">
+            <label for="">Full Name</label>
+            <div class="input">
+              <input type="text" placeholder="Enter your Name" formControlName="fullname">
+              <i class="ri-mail-line"></i>
+            </div>
+            <span class="text-danger" *ngIf="signupForm.controls['fullname'].dirty && signupForm.hasError('required','fullname')">*Fullname is required</span>
+          </div>
+          <div class="items">
+            <label for="">Mobile Number</label>
+            <div class="input">
+              <input type="number" placeholder="Enter Mobile Number" formControlName="mobile">
+              <i class="ri-mail-line"></i>
+            </div>
+            <span class="text-danger" *ngIf="signupForm.controls['mobile'].dirty && signupForm.hasError('required','mobile')">*Mobile Number is required</span>
+          </div>
+          <div class="items">
+            <label for="">Email Address</label>
+            <div class="input">
+              <input type="text" placeholder="Email Address" formControlName="email">
+              <i class="ri-mail-line"></i>
+            </div>
+            <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Email is required</span>
+          </div>
+          <div class="items">
+            <label for="">Password</label>
+            <div class="input">
+              <input type="password" placeholder="Enter your password" formControlName="password">
+              <i class="ri-lock-line"></i>
+            </div>
+            <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Password is required</span>
+          </div>
+          <div class="form-signin">
+            <button class="btn" [disabled]="!signupForm.valid">Sign Up</button>
+          </div>
+          <div class="or-option">
+            <p>or</p>
+          </div>
+          <div class="form-signup">
+            <button routerLink="/login" class="btn">Login</button>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="login-extra">
+        <img src="https://svgshare.com/i/nDi.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
